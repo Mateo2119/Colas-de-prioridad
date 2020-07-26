@@ -47,6 +47,45 @@ void Monticulo::insertar(int prioridad){
 
 int Monticulo::atender(){
 //Hay que hacer estas funciones
+int ultimo= *(Arr+tam);
+ 	
+	if(*(Arr+2)>ultimo &&*(Arr+2)>*(Arr+3)){
+		*(Arr)=*(Arr+2);
+		posAct=*(Arr+2);
+	while(posAct<tam){
+             int subatender(int *Arr, int posAct,int ultimo,int tam);
+	}
+	}else if(ultimo>*(Arr+2) && ultimo >*(Arr+3)){
+
+		*(Arr)=ultimo;
+
+	}else if(*(Arr+3)>ultimo &&*(Arr+3)>*(Arr+2)){
+
+		*(Arr)=*(Arr+3);
+		posAct=*(Arr+3);
+
+		while(posAct<tam){
+			 int subatender(int *Arr, int posAct,int ultimo,int tam);
+		}
+	}
+}
+
+int subatender(int *Arr, int posAct,int ultimo,int tam){
+	 if(*(Arr+posAct*2)>*(Arr+posAct*2+1) && *(Arr+posAct*2)>ultimo){
+	 	
+            *(Arr+posAct)=*(Arr+posAct*2);
+	 	    *(Arr+posAct*2)=posAct;
+	 	    
+	 }else if(*(Arr+posAct*2+1)>*(Arr+posAct*2) && *(Arr+posAct*2+1)>ultimo){
+	 	
+	 	    *(Arr+posAct)=*(Arr+posAct*2+1);
+	 	    *(Arr+posAct*2+1)=posAct;
+	 	    
+	 }else if(ultimo>*(Arr+posAct*2) && ultimo>*(Arr+posAct*2+1)){
+	 	
+	 	    *(Arr+posAct)=ultimo;
+	 }
+tam =-- tam;
 }
 
 void Monticulo::imprimir(){	
