@@ -44,19 +44,19 @@ int Monticulo::atender(int *Arr, int tam, int posAct){
 	if(*(Arr+2)>ultimo &&*(Arr+2)>*(Arr+3)){
 		*(Arr)=*(Arr+2);
 		posAct=*(Arr+2);
-	while(posAct=!NULL){
+	while(posAct<tam){
              int subatender(int *Arr, int posAct,int ultimo,int tam);
 	}
 	}else if(ultimo>*(Arr+2) && ultimo >*(Arr+3)){
-		
+
 		*(Arr)=ultimo;
-		
+
 	}else if(*(Arr+3)>ultimo &&*(Arr+3)>*(Arr+2)){
-		
+
 		*(Arr)=*(Arr+3);
 		posAct=*(Arr+3);
-		
-		while(posAct=!NULL){
+
+		while(posAct<tam){
 			 int subatender(int *Arr, int posAct,int ultimo,int tam);
 	}
 }
