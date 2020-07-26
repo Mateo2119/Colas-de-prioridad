@@ -4,8 +4,7 @@
 using namespace std;
 
 
-template<class T>
-class Lista{
+class Monticulo{
 	int *Arr;
 	int tam, posAct;
 	
@@ -18,6 +17,22 @@ class Lista{
 	bool monticulo_lleno();
 	
 };
+
+void Monticulo::insertar(int nodo){	
+//Hay que hacer estas funciones
+}
+
+int Monticulo::atender(){	
+//Hay que hacer estas funciones
+}
+
+void Monticulo::imprimir(){	
+//Hay que hacer estas funciones
+}
+
+bool Monticulo::monticulo_lleno(){	
+}
+//Hay que hacer estas funciones
 
 
 #endif
