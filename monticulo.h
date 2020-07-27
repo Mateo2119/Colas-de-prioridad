@@ -22,7 +22,6 @@ class Monticulo{
 	int atender();
 	int subatender(int posAct, int utlitmo, int tam);
 	void imprimir();
-	bool monticulo_lleno();	
 };
 
 void Monticulo::insertar(int prioridad){
@@ -54,9 +53,14 @@ int ultimo= lista[tam];
 		lista[1]=lista[2];
 		posAct=lista[2];
 	while(posAct<tam){
-             int subatender(int *Arr, int posAct,int ultimo,int tam);
-	}
+			  subatender(posAct, ultimo, tam);
+		}
+		tam =-- tam;
+
 	}else if(ultimo>lista[2] && ultimo >lista[3]){
+
+	}else if(ultimo>lista[2] && ultimo >lista[3]){
+
 
 		lista[1]=ultimo;
 
@@ -68,6 +72,7 @@ int ultimo= lista[tam];
 		while(posAct<tam){
 			  subatender(posAct, ultimo, tam);
 		}
+		tam =-- tam;
 	}
 }
 
@@ -93,14 +98,13 @@ tam =-- tam;
 }
 
 void Monticulo::imprimir(){	
-	cout<<"tamaño: "<<tam<<endl;
+	cout<<"tamaÃ±o: "<<tam<<endl;
 	for(int i=1; i<=tam;i++){
 		cout<<i<<" valor: "<<lista[i]<<endl;
 	}
 }
 
-bool Monticulo::monticulo_lleno(){	
-}
+
 //Hay que hacer estas funciones
 
 
