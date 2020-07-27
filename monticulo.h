@@ -20,6 +20,7 @@ class Monticulo{
 	
 	void insertar(int prioridad);
 	int atender();
+	int subatender(int posAct, int utlitmo, int tam);
 	void imprimir();
 	bool monticulo_lleno();	
 };
@@ -47,43 +48,46 @@ void Monticulo::insertar(int prioridad){
 
 int Monticulo::atender(){
 //Hay que hacer estas funciones
-int ultimo= *(Arr+tam);
+int ultimo= lista[tam];
  	
-	if(*(Arr+2)>ultimo &&*(Arr+2)>*(Arr+3)){
-		*(Arr)=*(Arr+2);
-		posAct=*(Arr+2);
+	if(lista[2]>ultimo &&lista[2]>lista[3]){
+		lista[1]=lista[2];
+		posAct=lista[2];
 	while(posAct<tam){
              int subatender(int *Arr, int posAct,int ultimo,int tam);
 	}
-	}else if(ultimo>*(Arr+2) && ultimo >*(Arr+3)){
+	}else if(ultimo>lista[2] && ultimo >lista[3]){
 
-		*(Arr)=ultimo;
+		lista[1]=ultimo;
 
-	}else if(*(Arr+3)>ultimo &&*(Arr+3)>*(Arr+2)){
+	}else if(lista[3]>ultimo && lista[3]>lista[2]){
 
-		*(Arr)=*(Arr+3);
-		posAct=*(Arr+3);
+		lista[1]=lista[3];
+		posAct=lista[3];
 
 		while(posAct<tam){
-			 int subatender(int *Arr, int posAct,int ultimo,int tam);
+			  subatender(posAct, ultimo, tam);
 		}
 	}
 }
 
-int subatender(int *Arr, int posAct,int ultimo,int tam){
-	 if(*(Arr+posAct*2)>*(Arr+posAct*2+1) && *(Arr+posAct*2)>ultimo){
+int Monticulo::subatender(int posAct,int ultimo,int tam){
+	
+		
+	 if(lista[posAct*2] > lista[(posAct*2)+ 1] && lista[(posAct*2)] > ultimo){
 	 	
-            *(Arr+posAct)=*(Arr+posAct*2);
-	 	    *(Arr+posAct*2)=posAct;
+	 		lista[posAct] = lista[posAct*2];
+	 		lista[posAct*2] = posAct;
+            
 	 	    
-	 }else if(*(Arr+posAct*2+1)>*(Arr+posAct*2) && *(Arr+posAct*2+1)>ultimo){
-	 	
-	 	    *(Arr+posAct)=*(Arr+posAct*2+1);
-	 	    *(Arr+posAct*2+1)=posAct;
+	 }else if(lista[(posAct*2)+ 1]> lista[posAct*2] && lista[(posAct*2)+ 1]>ultimo){
+	 		lista[posAct] = lista[(posAct*2)+ 1];
+	 		lista[(posAct*2)+ 1] = posAct;
 	 	    
-	 }else if(ultimo>*(Arr+posAct*2) && ultimo>*(Arr+posAct*2+1)){
-	 	
-	 	    *(Arr+posAct)=ultimo;
+	 	    
+	 }else if(ultimo>lista[posAct*2] && ultimo>lista[(posAct*2)+ 1]){
+	 		lista[posAct] = ultimo;
+	 	    
 	 }
 tam =-- tam;
 }

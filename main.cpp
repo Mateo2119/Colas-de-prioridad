@@ -15,6 +15,9 @@ int main(int argc, char *argv[]){
 	lista.insertar(120);
 	lista.insertar(130);
 	lista.imprimir();
+	cout<<"atender"<<endl;
+	lista.atender();
+	lista.imprimir();
 }
 	
 	
