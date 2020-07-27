@@ -55,6 +55,7 @@ int ultimo= *(Arr+tam);
 	while(posAct<tam){
              int subatender(int *Arr, int posAct,int ultimo,int tam);
 	}
+	tam =-- tam;
 	}else if(ultimo>*(Arr+2) && ultimo >*(Arr+3)){
 
 		*(Arr)=ultimo;
@@ -67,6 +68,7 @@ int ultimo= *(Arr+tam);
 		while(posAct<tam){
 			 int subatender(int *Arr, int posAct,int ultimo,int tam);
 		}
+		tam =-- tam;
 	}
 }
 
@@ -85,11 +87,11 @@ int subatender(int *Arr, int posAct,int ultimo,int tam){
 	 	
 	 	    *(Arr+posAct)=ultimo;
 	 }
-tam =-- tam;
+//tam =-- tam;
 }
 
 void Monticulo::imprimir(){	
-	cout<<"tamaño: "<<tam<<endl;
+	cout<<"tamaÃ±o: "<<tam<<endl;
 	for(int i=1; i<=tam;i++){
 		cout<<i<<" valor: "<<lista[i]<<endl;
 	}
