@@ -55,10 +55,8 @@ int ultimo= lista[tam];
 	while(posAct<tam){
 			  subatender(posAct, ultimo, tam);
 		}
-		tam =-- tam;
-
-	}else if(ultimo>lista[2] && ultimo >lista[3]){
-
+	tam =-- tam;
+	
 	}else if(ultimo>lista[2] && ultimo >lista[3]){
 
 
