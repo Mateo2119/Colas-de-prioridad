@@ -66,7 +66,7 @@ int ultimo= lista[tam];
 
 		lista[1]=lista[3];
 		posAct=lista[3];
-
+		lista[3] = ultimo;
 		while(posAct<tam){
 			  subatender(posAct, ultimo, tam);
 		}
